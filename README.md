@@ -80,7 +80,7 @@ Overall, when training and comiling the data and models, four different attempts
     - ReLU activation was used to handle non-linear relationships.
     - Dropout was added to prevent overfitting.
 
-![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png)
+![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png?raw=true)
 
 **2nd Optimization Model**
 * Hidden Layers:
@@ -92,7 +92,7 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of neurons and layers to allow the model to learn more complex patterns.
     - Dropout rates were increased to prevent overfitting.
 
-![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png)
+![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png?raw=true)
 
 **3rd Optimization Model**
 * Hidden Layers:
@@ -106,7 +106,7 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of layers to capture more complex relationships.
     - Dropped additional columns (`ASK_AMT`) to simplify the input data.
 
-![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png)
+![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png?raw=true)
 
 **4th Optimization Model**
 * Hidden Layers:
@@ -121,7 +121,7 @@ Overall, when training and comiling the data and models, four different attempts
     - Dropout was used to prevent overfitting.
     - The architecture was tuned using Keras Tuner to find the optimal number of neurons and layers.
 
-![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png)
+![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
 
 **Question 2: Were you able to achieve the target model performance?**
 * Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. 
