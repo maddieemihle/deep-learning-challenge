@@ -71,8 +71,6 @@ Overall, when training and comiling the data and models, four different attempts
 **Question 1: How many neurons, layers, and activation functions did you select for your neural network model, and why?**
 
 **1st Optimization Model**
-![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png?raw=true)
-
 * Hidden Layers:
     - Layer 1: 128 neurons, ReLU activation, and Dropout (20%).
     - Layer 2: 64 neurons, ReLU activation, and Dropout (20%).
@@ -82,9 +80,11 @@ Overall, when training and comiling the data and models, four different attempts
     - ReLU activation was used to handle non-linear relationships.
     - Dropout was added to prevent overfitting.
 
-**2nd Optimization Model**
-![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png?raw=true)
+Image: 1st Opt Model 
+![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png?raw=true)
 
+--------
+**2nd Optimization Model**
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, and Dropout (30%).
@@ -94,9 +94,11 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of neurons and layers to allow the model to learn more complex patterns.
     - Dropout rates were increased to prevent overfitting.
 
-**3rd Optimization Model**
-![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png?raw=true)
+Image: 2nd Opt Model
+![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png?raw=true)
 
+--------
+**3rd Optimization Model**
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
@@ -108,9 +110,11 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of layers to capture more complex relationships.
     - Dropped additional columns (`ASK_AMT`) to simplify the input data.
 
-**4th Optimization Model**
-![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
+Image: 3rd Opt Model 
+![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png?raw=true)
 
+--------
+**4th Optimization Model**
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
@@ -123,8 +127,12 @@ Overall, when training and comiling the data and models, four different attempts
     - Dropout was used to prevent overfitting.
     - The architecture was tuned using Keras Tuner to find the optimal number of neurons and layers.
 
+Image: 4th Opt Model 
+![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
+
+
 **Question 2: Were you able to achieve the target model performance?**
-* Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. 
+* Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. The model performace is as follows: 
     * 1st Optimization Attempt: 
         - Accuracy 73%
         - Loss 56% 
@@ -162,8 +170,6 @@ Overall, when training and comiling the data and models, four different attempts
 ### **Summary**
 Overall Results: The deep learning model achieved a maximum accuracy of 73%, which is below the target of 75%. Despite extensive optimizations, the model struggled to extract enough meaningful patterns from the data to achieve the desired performance.
 
-**Summary of Results**
-
 | Attempt | Hidden Layers | Accuracy | Loss | Key Changes |
 |---------|---------------|----------|------|-------------|
 | 1st     | 2             | 73%      | 56%  | Baseline model with simple architecture. |
@@ -171,18 +177,19 @@ Overall Results: The deep learning model achieved a maximum accuracy of 73%, whi
 | 3rd     | 4             | 72%      | 55%  | Added Batch Normalization and dropped columns. |
 | 4th     | 4             | 72%      | 55%  | Used Hyperparameter Tuning to optimize architecture. |
 
-**Recommendation:**
+### **Recommendation:**
 * When attempting the Batch Normalization and Dropout, I hoped that I would see a difference as in the 10 trials there was an increse to 74%. However, when fitting the model after the trials were made, it jumped back down to 72%. I think further analysis could help improve this. 
 * A different machine learning model, such as Random Forest or Gradient Boosting (e.g., XGBoost), may be more suitable for this classification problem. These models often perform better on tabular data with categorical features and can handle imbalanced datasets effectively.
 * Additionally, feature engineering (e.g., creating interaction terms, binning numerical variables) and further exploration of the dataset (e.g., identifying additional patterns or correlations) could improve performance.
 
-**Explanation**: Neural networks excel at learning from large datasets with complex, non-linear relationships (e.g., image or text data). However, for structured tabular data, tree-based models like Random Forest or Gradient Boosting often outperform neural networks due to their ability to handle categorical variables and imbalanced data more effectively.
+### **Conclusion**: 
+Overall, neural networks excel at learning from large datasets with complex, non-linear relationships (e.g., image or text data). However, for structured tabular data, tree-based models like Random Forest or Gradient Boosting often outperform neural networks due to their ability to handle categorical variables and imbalanced data more effectively.
 
 
 ## Tools & Technologies used 
-* Development Environment: Jupyter Notebook / Google Colab
-* Version Control: Git and GitHub
-* Hardware: Local machine or cloud-based GPU for faster training.
+* **Development Environment**: Jupyter Notebook / Google Colab
+* **Version Control**: Git and GitHub
+* **Hardware**: Local machine or cloud-based GPU for faster training.
 
 ## Resources
 - **Dataset**: Provided by Alphabet Soup (CSV file containing metadata about organizations).
