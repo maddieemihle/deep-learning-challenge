@@ -5,8 +5,7 @@ Alphabet Soup, a nonprofit foundation, aims to identify applicants for funding w
 
 This project uses a deep learning neural network to analyze the dataset and attempts to optimize the model to achieve an accuracy of 75% or higher.
 
-
-## Analysis Steps 
+## Challenge Instructions: 
 **Step 1: Import Dependencies and Load Dataset**
 * Include all necessary libraries (e.g., `pandas`, `tensorflow`, `sklearn`) and load the dataset into a DataFrame.
 
@@ -44,7 +43,7 @@ The purpose of this analysis is to create a binary classification model using a 
 
 ### **Results**
 
-### Part 1: Data Processing
+##### Part 1: Data Processing
 **Question 1: What variable(s) are the target(s) for your model?**
 * The target variable is `IS_SUCCESSFUL` which indicates whethere the funding was used effectively for success or for failure 
 
@@ -64,7 +63,7 @@ The variables that the features include are:
 * `SPECIAL_CONSIDERATIONS`: Highly imbalanced and did not significantly impact the model.
 * `ASK_AMT`: Transformed using a log transformation to reduce the impact of outliers.
 
-### Part 2: Compiling, Training, and Evaluating the Model
+##### Part 2: Compiling, Training, and Evaluating the Model
 
 Overall, when training and comiling the data and models, four different attempts were made to try and get the accuracy over 75%. The questions are answered as follows: 
 
@@ -130,6 +129,7 @@ Image: 3rd Opt Model
 Image: 4th Opt Model 
 ![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
 
+--------
 
 **Question 2: Were you able to achieve the target model performance?**
 * Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. The model performace is as follows: 
@@ -167,7 +167,7 @@ Image: 4th Opt Model
         - Dropped additional columns and tested their impact on accuracy (`ASK_AMT`)
 
 
-### **Summary**
+### Summary
 Overall Results: The deep learning model achieved a maximum accuracy of 73%, which is below the target of 75%. Despite extensive optimizations, the model struggled to extract enough meaningful patterns from the data to achieve the desired performance.
 
 | Attempt | Hidden Layers | Accuracy | Loss | Key Changes |
@@ -177,14 +177,13 @@ Overall Results: The deep learning model achieved a maximum accuracy of 73%, whi
 | 3rd     | 4             | 72%      | 55%  | Added Batch Normalization and dropped columns. |
 | 4th     | 4             | 72%      | 55%  | Used Hyperparameter Tuning to optimize architecture. |
 
-### **Recommendation:**
+### Recommendation
 * When attempting the Batch Normalization and Dropout, I hoped that I would see a difference as in the 10 trials there was an increse to 74%. However, when fitting the model after the trials were made, it jumped back down to 72%. I think further analysis could help improve this. 
 * A different machine learning model, such as Random Forest or Gradient Boosting (e.g., XGBoost), may be more suitable for this classification problem. These models often perform better on tabular data with categorical features and can handle imbalanced datasets effectively.
 * Additionally, feature engineering (e.g., creating interaction terms, binning numerical variables) and further exploration of the dataset (e.g., identifying additional patterns or correlations) could improve performance.
 
-### **Conclusion**: 
+### Conclusion
 Overall, neural networks excel at learning from large datasets with complex, non-linear relationships (e.g., image or text data). However, for structured tabular data, tree-based models like Random Forest or Gradient Boosting often outperform neural networks due to their ability to handle categorical variables and imbalanced data more effectively.
-
 
 ## Tools & Technologies used 
 * **Development Environment**: Jupyter Notebook / Google Colab
