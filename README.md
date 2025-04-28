@@ -71,6 +71,8 @@ Overall, when training and comiling the data and models, four different attempts
 **Question 1: How many neurons, layers, and activation functions did you select for your neural network model, and why?**
 
 **1st Optimization Model**
+![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png?raw=true)
+
 * Hidden Layers:
     - Layer 1: 128 neurons, ReLU activation, and Dropout (20%).
     - Layer 2: 64 neurons, ReLU activation, and Dropout (20%).
@@ -80,9 +82,9 @@ Overall, when training and comiling the data and models, four different attempts
     - ReLU activation was used to handle non-linear relationships.
     - Dropout was added to prevent overfitting.
 
-![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png?raw=true)
-
 **2nd Optimization Model**
+![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png?raw=true)
+
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, and Dropout (30%).
@@ -92,9 +94,9 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of neurons and layers to allow the model to learn more complex patterns.
     - Dropout rates were increased to prevent overfitting.
 
-![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png?raw=true)
-
 **3rd Optimization Model**
+![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png?raw=true)
+
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
@@ -106,9 +108,9 @@ Overall, when training and comiling the data and models, four different attempts
     - Increased the number of layers to capture more complex relationships.
     - Dropped additional columns (`ASK_AMT`) to simplify the input data.
 
-![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png?raw=true)
-
 **4th Optimization Model**
+![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
+
 * Hidden Layers:
     - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
     - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
@@ -120,8 +122,6 @@ Overall, when training and comiling the data and models, four different attempts
     - Batch Normalization was added to stabilize and speed up training.
     - Dropout was used to prevent overfitting.
     - The architecture was tuned using Keras Tuner to find the optimal number of neurons and layers.
-
-![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png?raw=true)
 
 **Question 2: Were you able to achieve the target model performance?**
 * Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. 
