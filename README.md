@@ -44,7 +44,7 @@ The purpose of this analysis is to create a binary classification model using a 
 
 ### **Results**
 
-#### Data Processing
+### Part 1: Data Processing
 **Question 1: What variable(s) are the target(s) for your model?**
 * The target variable is `IS_SUCCESSFUL` which indicates whethere the funding was used effectively for success or for failure 
 
@@ -64,7 +64,7 @@ The variables that the features include are:
 * `SPECIAL_CONSIDERATIONS`: Highly imbalanced and did not significantly impact the model.
 * `ASK_AMT`: Transformed using a log transformation to reduce the impact of outliers.
 
-#### Compiling, Training, and Evaluating the Model
+### Part 2: Compiling, Training, and Evaluating the Model
 
 Overall, when training and comiling the data and models, four different attempts were made to try and get the accuracy over 75%. The questions are answered as follows: 
 
