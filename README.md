@@ -45,7 +45,7 @@ The purpose of this analysis is to create a binary classification model using a 
 
 #### Part 1: Data Processing
 **Question 1: What variable(s) are the target(s) for your model?**
-* The target variable is `IS_SUCCESSFUL` which indicates whethere the funding was used effectively for success or for failure 
+* The target variable is `IS_SUCCESSFUL` which indicates whether the funding was used effectively for success or for failure 
 
 **Question 2: What variable(s) are the features for your model?**
 The variables that the features include are: 
@@ -55,7 +55,7 @@ The variables that the features include are:
 * `USE_CASE`
 * `ORGANIZATION`
 * `INCOME_AMT`
-* `ASK_AMT` (eventually droped this variable, but it did not have that much of an effect in the end)
+* `ASK_AMT` (eventually dropped this variable, but it did not have that much of an effect in the end)
 
 **Question 3: What variable(s) should be removed from the input data because they are neither targets nor features?**
 * `EIN` and `NAME`: Identification columns that do not contribute to the prediction.
@@ -65,7 +65,7 @@ The variables that the features include are:
 
 #### Part 2: Compiling, Training, and Evaluating the Model
 
-Overall, when training and comiling the data and models, four different attempts were made to try and get the accuracy over 75%. The questions are answered as follows: 
+Overall, when training and compiling the data and models, four different attempts were made to try and get the accuracy over 75%. The questions are answered as follows: 
 
 **Question 1: How many neurons, layers, and activation functions did you select for your neural network model, and why?**
 
@@ -132,7 +132,7 @@ Image: 4th Opt Model
 --------
 
 **Question 2: Were you able to achieve the target model performance?**
-* Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. The model performace is as follows: 
+* Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. The model performance is as follows: 
     * 1st Optimization Attempt: 
         - Accuracy 73%
         - Loss 56% 
@@ -151,7 +151,7 @@ Image: 4th Opt Model
         - Used Hyperparameter Tuning to optimize the number of neurons, dropout rates, and learning rate. Despite systematic tuning, the accuracy remained the same as the third attempt.
 
 **Question 3: What steps did you take in your attempts to increase model performance?**
-* Various steps were taken and adjustments were made to attempt to increase models performance. They are listed as follows: 
+* Various steps were taken and adjustments were made to attempt to increase the model’s performance. They are listed as follows: 
     * Data Preprocessing:
         - Combined rare categories in `APPLICATION_TYPE` and `CLASSIFICATION` into an "Other" category.
         - Dropped additional columns (`STATUS`, `SPECIAL_CONSIDERATIONS`) to remove irrelevant or low-variance features.
