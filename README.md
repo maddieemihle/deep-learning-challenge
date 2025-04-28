@@ -49,14 +49,14 @@ The purpose of this analysis is to create a binary classification model using a 
 * The target variable is `IS_SUCCESSFUL` which indicates whethere the funding was used effectively for success or for failure 
 
 **Question 2: What variable(s) are the features for your model?**
-* The variables that the features include are: 
-    * `APPLICATION_TYPE`
-    * `AFFILIATION`
-    * `CLASSIFICATION`
-    * `USE_CASE`
-    * `ORGANIZATION`
-    * `INCOME_AMT`
-    * `ASK_AMT` (eventually droped this variable, but it did not have that much of an effect in the end)
+The variables that the features include are: 
+* `APPLICATION_TYPE`
+* `AFFILIATION`
+* `CLASSIFICATION`
+* `USE_CASE`
+* `ORGANIZATION`
+* `INCOME_AMT`
+* `ASK_AMT` (eventually droped this variable, but it did not have that much of an effect in the end)
 
 **Question 3: What variable(s) should be removed from the input data because they are neither targets nor features?**
 * `EIN` and `NAME`: Identification columns that do not contribute to the prediction.
@@ -71,57 +71,57 @@ Overall, when training and comiling the data and models, four different attempts
 **Question 1: How many neurons, layers, and activation functions did you select for your neural network model, and why?**
 
 **1st Optimization Model**
-    * Hidden Layers:
-        - Layer 1: 128 neurons, ReLU activation, and Dropout (20%).
-        - Layer 2: 64 neurons, ReLU activation, and Dropout (20%).
-    * Output Layer: 1 neuron with a sigmoid activation function for binary classification.
-    * Reasoning:
-        - A simple architecture was chosen to establish a baseline for performance.
-        - ReLU activation was used to handle non-linear relationships.
-        - Dropout was added to prevent overfitting.
+* Hidden Layers:
+    - Layer 1: 128 neurons, ReLU activation, and Dropout (20%).
+    - Layer 2: 64 neurons, ReLU activation, and Dropout (20%).
+* Output Layer: 1 neuron with a sigmoid activation function for binary classification.
+* Reasoning:
+    - A simple architecture was chosen to establish a baseline for performance.
+    - ReLU activation was used to handle non-linear relationships.
+    - Dropout was added to prevent overfitting.
 
-![1st attempt]()
+![1st attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_1.png)
 
 **2nd Optimization Model**
-    * Hidden Layers:
-        - Layer 1: 256 neurons, ReLU activation, and Dropout (30%).
-        - Layer 2: 128 neurons, ReLU activation, and Dropout (30%).
-        - Layer 3: 64 neurons, ReLU activation, and Dropout (20%).
-    * Output Layer: 1 neuron with a sigmoid activation function for binary classification.
-    * Reasoning:
-        - Increased the number of neurons and layers to allow the model to learn more complex patterns.
-        - Dropout rates were increased to prevent overfitting.
+* Hidden Layers:
+    - Layer 1: 256 neurons, ReLU activation, and Dropout (30%).
+    - Layer 2: 128 neurons, ReLU activation, and Dropout (30%).
+    - Layer 3: 64 neurons, ReLU activation, and Dropout (20%).
+* Output Layer: 1 neuron with a sigmoid activation function for binary classification.
+* Reasoning:
+    - Increased the number of neurons and layers to allow the model to learn more complex patterns.
+    - Dropout rates were increased to prevent overfitting.
 
-![2nd attempt]()
+![2nd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_2.png)
 
 **3rd Optimization Model**
-    * Hidden Layers:
-        - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
-        - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
-        - Layer 3: 64 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
-        - Layer 4: 32 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
-    * Output Layer: 1 neuron with a sigmoid activation function for binary classification.
-    * Reasoning:
-        - Added Batch Normalization to stabilize and speed up training.
-        - Increased the number of layers to capture more complex relationships.
-        - Dropped additional columns (`ASK_AMT`) to simplify the input data.
+* Hidden Layers:
+    - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
+    - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
+    - Layer 3: 64 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
+    - Layer 4: 32 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
+* Output Layer: 1 neuron with a sigmoid activation function for binary classification.
+* Reasoning:
+    - Added Batch Normalization to stabilize and speed up training.
+    - Increased the number of layers to capture more complex relationships.
+    - Dropped additional columns (`ASK_AMT`) to simplify the input data.
 
-![3rd attempt]()
+![3rd attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/Opt_3.png)
 
 **4th Optimization Model**
-    * Hidden Layers:
-        - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
-        - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
-        - Layer 3: 64 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
-        - Layer 4: 32 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
-    * Output Layer: 1 neuron with a sigmoid activation function for binary classification.
-    * Reasoning: 
-        - ReLU activation was chosen for hidden layers to handle non-linear relationships.
-        - Batch Normalization was added to stabilize and speed up training.
-        - Dropout was used to prevent overfitting.
-        - The architecture was tuned using Keras Tuner to find the optimal number of neurons and layers.
+* Hidden Layers:
+    - Layer 1: 256 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
+    - Layer 2: 128 neurons, ReLU activation, Batch Normalization, and Dropout (30%).
+    - Layer 3: 64 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
+    - Layer 4: 32 neurons, ReLU activation, Batch Normalization, and Dropout (20%).
+* Output Layer: 1 neuron with a sigmoid activation function for binary classification.
+* Reasoning: 
+    - ReLU activation was chosen for hidden layers to handle non-linear relationships.
+    - Batch Normalization was added to stabilize and speed up training.
+    - Dropout was used to prevent overfitting.
+    - The architecture was tuned using Keras Tuner to find the optimal number of neurons and layers.
 
-![4th attempt]()
+![4th attempt](https://github.com/maddieemihle/deep-learning-challenge/blob/main/Images/opt_4.png)
 
 **Question 2: Were you able to achieve the target model performance?**
 * Despite multiple optimizations, the model achieved a maximum accuracy of 73%, which is below the target of 75%. 
